@@ -13831,86 +13831,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 </deviceset>
 </devicesets>
 </library>
-<library name="MS5637">
-<packages>
-<package name="MS5637">
-<smd name="VDD" x="-1" y="1" dx="1" dy="1" layer="1"/>
-<smd name="GND" x="1" y="1" dx="1" dy="1" layer="1"/>
-<smd name="SCL" x="1" y="-1" dx="1" dy="1" layer="1"/>
-<smd name="SDA" x="-1" y="-1" dx="1" dy="1" layer="1"/>
-<text x="-1.27" y="-2.54" size="0.508" layer="21">MS5637</text>
-<wire x1="-1.7" y1="1.7" x2="1.8" y2="1.7" width="0.127" layer="21"/>
-<wire x1="1.8" y1="1.7" x2="1.8" y2="-1.7" width="0.127" layer="21"/>
-<wire x1="1.8" y1="-1.7" x2="-1.7" y2="-1.7" width="0.127" layer="21"/>
-<wire x1="-1.7" y1="-1.7" x2="-1.7" y2="1.7" width="0.127" layer="21"/>
-<circle x="-1.27" y="1.27" radius="0.254" width="0.127" layer="21"/>
-<text x="0" y="0" size="0.254" layer="21">MEAS</text>
-</package>
-<package name="MS5637TH">
-<pad name="VDD" x="-1" y="1" drill="0.6"/>
-<pad name="GND" x="1" y="1" drill="0.6"/>
-<pad name="SCL" x="1" y="-1" drill="0.6"/>
-<pad name="SDA" x="-1" y="-1" drill="0.6"/>
-</package>
-</packages>
-<symbols>
-<symbol name="MS5637">
-<wire x1="-10.16" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="7.62" y1="7.62" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
-<pin name="VDD" x="-15.24" y="2.54" length="middle"/>
-<pin name="SDA" x="-15.24" y="-5.08" length="middle"/>
-<pin name="GND" x="12.7" y="2.54" length="middle" rot="R180"/>
-<pin name="SCL" x="12.7" y="-5.08" length="middle" rot="R180"/>
-<text x="-10.16" y="-12.7" size="1.27" layer="94">MS5637</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="MS5637">
-<description>Le MS563702BA03-50 est un Micro Altimètre ultra compact optimisé pour des applications d'altimètre et de baromètre dans des téléphones portables et des tablettes.
-La résolution d'altitude au niveau de la mer est de 13cm d'air. Le module de capteur comprend un capteur de pression haute linéarité et un CAN &amp;Delta;Σ 24 bits ultra
-faible puissance avec des coefficients internes calibrés en usine. Il fournit une valeur numérique de pression et de température précise de 24 bits et différents modes
-de fonctionnement qui permettent à l'utilisateur d'optimiser la vitesse de conversion et la consommation de courant. La sortie de température à haute résolution permet
-la mise en œuvre d'une fonction altimètre / thermomètre sans capteur supplémentaire. Il peut être interfacé avec pratiquement tous les microcontrôleurs à interface I²C-bus.
-Le protocole de communication est simple, sans avoir à programmer des registres internes dans l'appareil. Faibles dimensions de 3 x 3 x 0.9mm³ pour une intégratio
-Module haute résolution, 13cm
-Capteur de pression numérique intégré (CAN ΔΣ 24 bits)
-Interface I²C
-Plage de pression étendue de 10 à 2000mbar
-Conversion rapide jusqu'à 0.5ms
-Faible consommation, 0.6µA (veille &lt;=0.1µA à 25°C)
-Aucun composant externe (oscillateur interne)</description>
-<gates>
-<gate name="G$1" symbol="MS5637" x="-7.62" y="10.16"/>
-</gates>
-<devices>
-<device name="" package="MS5637">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="SCL" pad="SCL"/>
-<connect gate="G$1" pin="SDA" pad="SDA"/>
-<connect gate="G$1" pin="VDD" pad="VDD"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="TH" package="MS5637TH">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="SCL" pad="SCL"/>
-<connect gate="G$1" pin="SDA" pad="SDA"/>
-<connect gate="G$1" pin="VDD" pad="VDD"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 <attribute name="DELETE" value="MF"/>
@@ -14173,19 +14093,6 @@ Aucun composant externe (oscillateur interne)</description>
 <part name="J6" library="lpatiny" deviceset="RJ12" device="3.3" value="RJ123.3"/>
 <part name="CON2" library="lpatiny" deviceset="JACK_DC_BARREL" device=""/>
 <part name="J8" library="lpatiny" deviceset="RJ12" device="3.3" value="RJ123.3"/>
-<part name="LDR" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0207/2V" package3d_urn="urn:adsk.eagle:package:23490/1"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k">
-<spice>
-<pinmapping spiceprefix="R">
-<pinmap gate="G$1" pin="1" pinorder="1"/>
-<pinmap gate="G$1" pin="2" pinorder="2"/>
-</pinmapping>
-</spice>
-<attribute name="ELECROW" value="C17407"/>
-<attribute name="LCSC" value="C17407"/>
-<attribute name="MPN" value="RC1206FR-07100KL"/>
-</part>
-<part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="MBR0520LT" device="" package3d_urn="urn:adsk.eagle:package:43420/1" value="Schottky">
 <attribute name="LCSC" value="C82544"/>
 <attribute name="MPN" value="621-1N5819HW-F"/>
@@ -14195,35 +14102,11 @@ Aucun composant externe (oscillateur interne)</description>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="10u">
-<spice>
-<pinmapping spiceprefix="C">
-<pinmap gate="G$1" pin="1" pinorder="1"/>
-<pinmap gate="G$1" pin="2" pinorder="2"/>
-</pinmapping>
-</spice>
-<attribute name="ELECROW" value="C15850"/>
-<attribute name="LCSC" value="C15850"/>
-<attribute name="MPN" value="77-VJ1206V106ZXQTBC"/>
-</part>
-<part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805K" package3d_urn="urn:adsk.eagle:package:23681/2" value="100nF">
-<spice>
-<pinmapping spiceprefix="C">
-<pinmap gate="G$1" pin="1" pinorder="1"/>
-<pinmap gate="G$1" pin="2" pinorder="2"/>
-</pinmapping>
-</spice>
-<attribute name="ELECROW" value="C49678"/>
-<attribute name="LCSC" value="C49678"/>
-<attribute name="MPN" value="80-C1206C104K5R"/>
-</part>
 <part name="R1" library="rcl" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="R0805" value="4.7k"/>
 <part name="P+3" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+4" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="U$6" library="SIM800L" deviceset="SIM800L" device=""/>
-<part name="U$7" library="MS5637" deviceset="MS5637" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14269,7 +14152,6 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="55.88" y1="198.12" x2="-15.24" y2="198.12" width="1.524" layer="94"/>
 <text x="210.82" y="170.18" size="5.08" layer="91">Anemometer</text>
 <text x="213.36" y="119.38" size="5.08" layer="91">Microphone</text>
-<text x="337.82" y="109.22" size="5.08" layer="91">LDR </text>
 <text x="0" y="187.96" size="5.08" layer="91">MEMORY</text>
 <wire x1="304.8" y1="-2.54" x2="304.8" y2="233.68" width="1.27" layer="94"/>
 <wire x1="205.74" y1="233.68" x2="304.8" y2="233.68" width="1.27" layer="94"/>
@@ -14283,9 +14165,7 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="302.26" y1="129.54" x2="401.32" y2="129.54" width="1.27" layer="94"/>
 <wire x1="302.26" y1="68.58" x2="401.32" y2="68.58" width="1.27" layer="94"/>
 <wire x1="302.26" y1="-2.54" x2="401.32" y2="-2.54" width="1.27" layer="94"/>
-<text x="309.88" y="119.38" size="5.08" layer="91">Photoresistor</text>
 <text x="213.36" y="58.42" size="5.08" layer="91">GSM communication</text>
-<text x="309.88" y="58.42" size="5.08" layer="91">Barometric pressure</text>
 <text x="309.88" y="170.18" size="5.08" layer="91">Rain sensor</text>
 <text x="309.88" y="223.52" size="5.08" layer="91">Humidity</text>
 </plain>
@@ -14455,13 +14335,6 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <instance part="J6" gate="G$1" x="101.6" y="30.48"/>
 <instance part="CON2" gate="G$1" x="-1.27" y="76.2" rot="R270"/>
 <instance part="J8" gate="G$1" x="124.46" y="17.78"/>
-<instance part="LDR" gate="G$1" x="332.74" y="91.44"/>
-<instance part="R2" gate="G$1" x="355.6" y="91.44" rot="R180">
-<attribute name="MPN" x="355.6" y="91.44" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="LCSC" x="355.6" y="91.44" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="ELECROW" x="355.6" y="91.44" size="1.778" layer="96" rot="R180" display="off"/>
-</instance>
-<instance part="GND1" gate="1" x="320.04" y="81.28"/>
 <instance part="D4" gate="G$1" x="20.32" y="76.2">
 <attribute name="MPN" x="20.32" y="76.2" size="1.778" layer="96" display="off"/>
 <attribute name="LCSC" x="20.32" y="76.2" size="1.778" layer="96" display="off"/>
@@ -14471,23 +14344,11 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <instance part="GND2" gate="1" x="0" y="170.18" rot="R180"/>
 <instance part="GND7" gate="1" x="45.72" y="167.64" rot="R180"/>
 <instance part="P+2" gate="G$1" x="73.66" y="215.9"/>
-<instance part="GND3" gate="1" x="370.84" y="76.2"/>
-<instance part="C12" gate="G$1" x="370.84" y="86.36">
-<attribute name="MPN" x="370.84" y="86.36" size="1.778" layer="96" display="off"/>
-<attribute name="LCSC" x="370.84" y="86.36" size="1.778" layer="96" display="off"/>
-<attribute name="ELECROW" x="370.84" y="86.36" size="1.778" layer="96" display="off"/>
-</instance>
-<instance part="C13" gate="G$1" x="378.46" y="86.36">
-<attribute name="MPN" x="378.46" y="86.36" size="1.778" layer="96" display="off"/>
-<attribute name="LCSC" x="378.46" y="86.36" size="1.778" layer="96" display="off"/>
-<attribute name="ELECROW" x="378.46" y="86.36" size="1.778" layer="96" display="off"/>
-</instance>
 <instance part="R1" gate="G$1" x="185.42" y="147.32" rot="R90"/>
 <instance part="R6" gate="G$1" x="193.04" y="147.32" rot="R90"/>
 <instance part="P+3" gate="G$1" x="96.52" y="200.66"/>
 <instance part="P+4" gate="G$1" x="106.68" y="205.74"/>
 <instance part="U$6" gate="G$1" x="251.46" y="33.02"/>
-<instance part="U$7" gate="G$1" x="350.52" y="38.1"/>
 </instances>
 <busses>
 </busses>
@@ -14646,12 +14507,6 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <label x="88.9" y="27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="320.04" y1="83.82" x2="320.04" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="LDR" gate="G$1" pin="1"/>
-<wire x1="320.04" y1="91.44" x2="327.66" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U$4" gate="G$1" pin="GND"/>
 <wire x1="-1.27" y1="86.36" x2="-10.16" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="CON2" gate="G$1" pin="GND"/>
@@ -14679,12 +14534,9 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="27.94" y1="165.1" x2="45.72" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C13" gate="G$1" pin="2"/>
-<pinref part="C12" gate="G$1" pin="2"/>
-<wire x1="378.46" y1="81.28" x2="370.84" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="370.84" y1="81.28" x2="370.84" y2="78.74" width="0.1524" layer="91"/>
-<junction x="370.84" y="81.28"/>
+<pinref part="U$6" gate="G$1" pin="GND"/>
+<wire x1="259.08" y1="43.18" x2="266.7" y2="43.18" width="0.1524" layer="91"/>
+<label x="266.7" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -14813,15 +14665,6 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="160.02" y1="215.9" x2="175.26" y2="215.9" width="0.1524" layer="91"/>
 <label x="170.18" y="215.9" size="1.778" layer="95"/>
 </segment>
-<segment>
-<wire x1="342.9" y1="91.44" x2="342.9" y2="104.14" width="0.1524" layer="91"/>
-<label x="342.9" y="99.06" size="2.54" layer="95" rot="R90"/>
-<pinref part="LDR" gate="G$1" pin="2"/>
-<wire x1="337.82" y1="91.44" x2="342.9" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="342.9" y1="91.44" x2="350.52" y2="91.44" width="0.1524" layer="91"/>
-<junction x="342.9" y="91.44"/>
-</segment>
 </net>
 <net name="A1" class="0">
 <segment>
@@ -14929,6 +14772,36 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="27.94" y1="160.02" x2="45.72" y2="160.02" width="0.1524" layer="91"/>
 <label x="44.704" y="161.544" size="1.016" layer="95" rot="R180"/>
 </segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="6"/>
+<wire x1="99.06" y1="43.18" x2="88.9" y2="43.18" width="0.1524" layer="91"/>
+<label x="88.9" y="43.18" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="6"/>
+<wire x1="121.92" y1="43.18" x2="111.76" y2="43.18" width="0.1524" layer="91"/>
+<label x="111.76" y="43.18" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="6"/>
+<wire x1="144.78" y1="43.18" x2="134.62" y2="43.18" width="0.1524" layer="91"/>
+<label x="134.62" y="43.18" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J4" gate="G$1" pin="6"/>
+<wire x1="167.64" y1="43.18" x2="157.48" y2="43.18" width="0.1524" layer="91"/>
+<label x="157.48" y="43.18" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J5" gate="G$1" pin="6"/>
+<wire x1="193.04" y1="43.18" x2="182.88" y2="43.18" width="0.1524" layer="91"/>
+<label x="182.88" y="43.18" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J6" gate="G$1" pin="6"/>
+<wire x1="99.06" y1="22.86" x2="88.9" y2="22.86" width="0.1524" layer="91"/>
+<label x="88.9" y="22.86" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SCL" class="0">
 <segment>
@@ -14954,6 +14827,36 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="27.94" y1="162.56" x2="45.72" y2="162.56" width="0.1524" layer="91"/>
 <label x="44.958" y="164.338" size="1.016" layer="95" rot="R180"/>
 </segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="55.88" x2="88.9" y2="55.88" width="0.1524" layer="91"/>
+<label x="88.9" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="1"/>
+<wire x1="121.92" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
+<label x="111.76" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="55.88" x2="134.62" y2="55.88" width="0.1524" layer="91"/>
+<label x="134.62" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J4" gate="G$1" pin="1"/>
+<wire x1="167.64" y1="55.88" x2="157.48" y2="55.88" width="0.1524" layer="91"/>
+<label x="157.48" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J5" gate="G$1" pin="1"/>
+<wire x1="193.04" y1="55.88" x2="182.88" y2="55.88" width="0.1524" layer="91"/>
+<label x="182.88" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J6" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="35.56" x2="88.9" y2="35.56" width="0.1524" layer="91"/>
+<label x="88.9" y="35.56" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="TX" class="0">
 <segment>
@@ -14961,12 +14864,22 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="160.02" y1="149.86" x2="175.26" y2="149.86" width="0.1524" layer="91"/>
 <label x="170.18" y="149.86" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="RXD"/>
+<wire x1="259.08" y1="33.02" x2="266.7" y2="33.02" width="0.1524" layer="91"/>
+<label x="266.7" y="33.02" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="RX" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PD2(INT2/RXD1)"/>
 <wire x1="160.02" y1="147.32" x2="175.26" y2="147.32" width="0.1524" layer="91"/>
 <label x="170.18" y="147.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="TXD"/>
+<wire x1="236.22" y1="33.02" x2="226.06" y2="33.02" width="0.1524" layer="91"/>
+<label x="226.06" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D7" class="0">
@@ -15118,6 +15031,11 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="144.78" y1="101.6" x2="152.4" y2="101.6" width="0.1524" layer="91"/>
 <junction x="144.78" y="101.6"/>
 <pinref part="C4" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="VDD"/>
+<wire x1="236.22" y1="38.1" x2="226.06" y2="38.1" width="0.1524" layer="91"/>
+<label x="226.06" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -15302,82 +15220,6 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="193.04" y1="22.86" x2="182.88" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SDA4" class="0">
-<segment>
-<pinref part="J4" gate="G$1" pin="6"/>
-<wire x1="167.64" y1="43.18" x2="157.48" y2="43.18" width="0.1524" layer="91"/>
-<label x="157.48" y="43.18" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SCL4" class="0">
-<segment>
-<pinref part="J4" gate="G$1" pin="1"/>
-<wire x1="167.64" y1="55.88" x2="157.48" y2="55.88" width="0.1524" layer="91"/>
-<label x="157.48" y="55.88" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SDA3" class="0">
-<segment>
-<pinref part="J3" gate="G$1" pin="6"/>
-<wire x1="144.78" y1="43.18" x2="134.62" y2="43.18" width="0.1524" layer="91"/>
-<label x="134.62" y="43.18" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J6" gate="G$1" pin="6"/>
-<wire x1="99.06" y1="22.86" x2="88.9" y2="22.86" width="0.1524" layer="91"/>
-<label x="88.9" y="22.86" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SCL3" class="0">
-<segment>
-<pinref part="J3" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="55.88" x2="134.62" y2="55.88" width="0.1524" layer="91"/>
-<label x="134.62" y="55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J6" gate="G$1" pin="1"/>
-<wire x1="99.06" y1="35.56" x2="88.9" y2="35.56" width="0.1524" layer="91"/>
-<label x="88.9" y="35.56" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SCL1" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="99.06" y1="55.88" x2="88.9" y2="55.88" width="0.1524" layer="91"/>
-<label x="88.9" y="55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J5" gate="G$1" pin="1"/>
-<wire x1="193.04" y1="55.88" x2="182.88" y2="55.88" width="0.1524" layer="91"/>
-<label x="182.88" y="55.88" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SDA1" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="6"/>
-<wire x1="99.06" y1="43.18" x2="88.9" y2="43.18" width="0.1524" layer="91"/>
-<label x="88.9" y="43.18" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J5" gate="G$1" pin="6"/>
-<wire x1="193.04" y1="43.18" x2="182.88" y2="43.18" width="0.1524" layer="91"/>
-<label x="182.88" y="43.18" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SCL2" class="0">
-<segment>
-<pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
-<label x="111.76" y="55.88" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SDA2" class="0">
-<segment>
-<pinref part="J2" gate="G$1" pin="6"/>
-<wire x1="121.92" y1="43.18" x2="111.76" y2="43.18" width="0.1524" layer="91"/>
-<label x="111.76" y="43.18" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="3.3V" class="1">
 <segment>
 <wire x1="25.4" y1="45.72" x2="25.4" y2="40.64" width="0.1524" layer="91"/>
@@ -15448,20 +15290,13 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="99.06" y1="25.4" x2="88.9" y2="25.4" width="0.1524" layer="91"/>
 <label x="88.9" y="25.4" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="RST"/>
+<wire x1="259.08" y1="38.1" x2="266.7" y2="38.1" width="0.1524" layer="91"/>
+<label x="266.7" y="38.1" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="D14" class="1">
-<segment>
-<wire x1="370.84" y1="91.44" x2="370.84" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="360.68" y1="91.44" x2="370.84" y2="91.44" width="0.1524" layer="91"/>
-<label x="370.84" y="96.52" size="1.778" layer="95"/>
-<pinref part="C12" gate="G$1" pin="1"/>
-<wire x1="370.84" y1="91.44" x2="370.84" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="370.84" y1="88.9" x2="378.46" y2="88.9" width="0.1524" layer="91"/>
-<junction x="370.84" y="91.44"/>
-<junction x="370.84" y="88.9"/>
-</segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VCC"/>
 <wire x1="27.94" y1="167.64" x2="35.56" y2="167.64" width="0.1524" layer="91"/>
